@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Countdown</string>
+    <string name="day">Gün</string>
+    <string name="hour">Saat</string>
+    <string name="minute">Dakika</string>
+    <string name="second">Saniye</string>
+</resources>
