@@ -9,9 +9,12 @@ import android.icu.text.SimpleDateFormat
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.animation.LinearInterpolator
+import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
+import com.mfatihk.countdown.R
 import com.mfatihk.countdown.databinding.ViewCountdownTimerBinding
 import com.mfatihk.countdown.helper.DateTimeAdapter
 import java.util.Date
@@ -25,6 +28,7 @@ class Timer @JvmOverloads constructor(
     private var binding: ViewCountdownTimerBinding =
         ViewCountdownTimerBinding.inflate(LayoutInflater.from(context), this, true)
 
+    private var timerLayout: LinearLayout = binding.timerLayout
     private var tvProgressDay: TextView = binding.tvProgressDay
     private var tvProgressHour: TextView = binding.tvProgressHour
     private var tvProgressMinute: TextView = binding.tvProgressMinute
@@ -33,8 +37,13 @@ class Timer @JvmOverloads constructor(
     private var progressHour: ProgressBar = binding.progressHour
     private var progressMinute: ProgressBar = binding.progressMinute
     private var progressSecond: ProgressBar = binding.progressSecond
+    private var tvDay: TextView = binding.tvDay
+    private var tvHour: TextView = binding.tvHour
+    private var tvMinute: TextView = binding.tvMinute
+    private var tvSecond: TextView = binding.tvSecond
 
     init {
+        timerLayout = binding.timerLayout
         tvProgressDay = binding.tvProgressDay
         tvProgressHour = binding.tvProgressHour
         tvProgressMinute = binding.tvProgressMinute
@@ -43,12 +52,48 @@ class Timer @JvmOverloads constructor(
         progressHour = binding.progressHour
         progressMinute = binding.progressMinute
         progressSecond = binding.progressSecond
+        tvDay = binding.tvDay
+        tvHour = binding.tvHour
+        tvMinute = binding.tvMinute
+        tvSecond = binding.tvSecond
+
+        setupAttributes(attrs)
     }
 
     var elapsedDays: Long = 0
     var elapsedHours: Long = 0
     var elapsedMinutes: Long = 0
     var elapsedSeconds: Long = 0
+
+
+    private fun setupAttributes(attrs: AttributeSet?) {
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.Timer)
+        val countdownBackgroundColor = typedArray.getColor(
+            R.styleable.Timer_countdownBackgroundColor,
+            ContextCompat.getColor(context, android.R.color.transparent)
+        )
+        val timerTextColor = typedArray.getColor(
+            R.styleable.Timer_timerTextColor,
+            ContextCompat.getColor(context, R.color.countdownInsideText)
+        )
+        val countdownTextColor = typedArray.getColor(
+            R.styleable.Timer_countdownTextColor,
+            ContextCompat.getColor(context, R.color.countdownHeaderText)
+        )
+        typedArray.recycle()
+
+        timerLayout.setBackgroundColor(countdownBackgroundColor)
+
+        tvDay.setTextColor(countdownTextColor)
+        tvHour.setTextColor(countdownTextColor)
+        tvMinute.setTextColor(countdownTextColor)
+        tvSecond.setTextColor(countdownTextColor)
+
+        tvProgressDay.setTextColor(timerTextColor)
+        tvProgressHour.setTextColor(timerTextColor)
+        tvProgressMinute.setTextColor(timerTextColor)
+        tvProgressSecond.setTextColor(timerTextColor)
+    }
 
     fun setup(endDate: Long = 0L, screenWidth: Int) {
         if(screenWidth<730){
