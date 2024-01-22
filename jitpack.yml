@@ -3,5 +3,5 @@ jdk:
 before_install:
   - ./scripts/prepareJitpackEnvironment.sh
 install:
-  - FILE="-Dfile=finalcountdown-release-aar"
+  - FILE="-Dfile=finalcountdown-release.aar"
   - mvn install:install-file $FILE -DgroupId=com.github.mfthk -DartifactId=finalcountdown -Dversion=1.0 -Dpackaging=aar -DgeneratePom=true
