@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id ("org.jetbrains.kotlin.plugin.serialization") version "1.7.21"
+    //git coid ("org.jetbrains.kotlin.plugin.serialization") version "1.7.21"
 
 }
 
@@ -38,6 +38,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    kotlin {
+        version = "1.7.1"
+    }
+
+
     packaging {
         resources {
             excludes += "META-INF/*.kotlin_module"
