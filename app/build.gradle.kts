@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    //git coid ("org.jetbrains.kotlin.plugin.serialization") version "1.7.21"
+    //id ("org.jetbrains.kotlin.plugin.serialization") version "1.7.21"
 
 }
 
