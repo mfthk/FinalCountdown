@@ -12,8 +12,8 @@
         android:id="@+id/timer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:timerTextColor="@color/white"
-        app:countdownTextColor="@color/white"
+        app:timerTextColor="@color/black"
+        app:countdownTextColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>

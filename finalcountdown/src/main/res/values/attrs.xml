@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Timer">
+        <attr name="countdownBackgroundColor" format="color" />
+        <attr name="timerTextColor" format="color" />
+        <attr name="countdownTextColor" format="color" />
+    </declare-styleable>
+</resources>
