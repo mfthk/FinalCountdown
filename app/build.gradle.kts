@@ -38,14 +38,14 @@ android {
         jvmTarget = "1.8"
     }
 
-    /*kotlin {
-        version = "1.7.1"
-    }*/
+    kotlin {
+        version = "1.7.25"
+    }
 
 
     packaging {
         resources {
-            excludes += "META-INF/*.kotlin_module"
+            excludes += "META-INF/*.kotlin_version"
         }
     }
     buildFeatures {
