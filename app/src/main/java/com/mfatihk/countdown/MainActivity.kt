@@ -1,9 +1,6 @@
 package com.mfatihk.countdown
 
-import android.graphics.Point
 import android.os.Bundle
-import android.util.Log
-import android.view.Display
 import androidx.appcompat.app.AppCompatActivity
 import com.mfatihk.countdown.databinding.ActivityMainBinding
 
@@ -14,13 +11,5 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        Log.d("activity", "COUNTDOWN ACTIVITY")
-
-        val display: Display = this.windowManager.defaultDisplay
-        val size = Point()
-        display.getSize(size)
-        val widthPixels: Int = size.x
-        //binding.timer.setup(screenWidth = widthPixels, endDate = 1705402960000, startDate = 1705402740000)
-        binding.timer.setup(screenWidth = widthPixels, endDate = 1706183941000)
     }
 }

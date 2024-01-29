@@ -17,7 +17,7 @@ import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
 
-class Timer(context: Context, attrs: AttributeSet?): ConstraintLayout(context, attrs) {
+class Timer(context: Context, attrs: AttributeSet? = null): ConstraintLayout(context, attrs) {
     private var binding: ViewCountdownTimerBinding =
         ViewCountdownTimerBinding.inflate(LayoutInflater.from(context), this, true)
     private lateinit var countDownTimer: CountDownTimer
