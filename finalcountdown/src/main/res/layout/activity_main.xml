@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     android:background="@color/transparent"
     android:baselineAligned="false">
-    <com.mfatihk.finalcountdown.timer.Timer
+    <com.mfatihk.finalcountdown.CircularTimer
         android:id="@+id/timer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-    <com.mfatihk.finalcountdown.timer.Flat
+    <com.mfatihk.finalcountdown.FlatTimer
         android:id="@+id/flatTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

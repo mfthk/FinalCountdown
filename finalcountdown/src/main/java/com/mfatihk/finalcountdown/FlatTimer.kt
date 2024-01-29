@@ -1,4 +1,4 @@
-package com.mfatihk.countdown.timer
+package com.mfatihk.finalcountdown
 
 import android.content.Context
 import android.os.CountDownTimer
@@ -6,10 +6,10 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.mfatihk.countdown.databinding.ViewFlatCountdownTimerBinding
+import com.mfatihk.finalcountdown.databinding.ViewFlatCountdownTimerBinding
 import java.util.Calendar
 
-class Flat(context: Context, attrs: AttributeSet? = null): ConstraintLayout(context, attrs) {
+class FlatTimer(context: Context, attrs: AttributeSet? = null): ConstraintLayout(context, attrs) {
     private var binding: ViewFlatCountdownTimerBinding =
         ViewFlatCountdownTimerBinding.inflate(LayoutInflater.from(context), this, true)
     private lateinit var countDownTimer: CountDownTimer

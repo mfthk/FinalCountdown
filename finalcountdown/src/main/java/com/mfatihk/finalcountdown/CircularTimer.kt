@@ -1,4 +1,4 @@
-package com.mfatihk.countdown.timer
+package com.mfatihk.finalcountdown
 
 import android.content.Context
 import android.icu.text.SimpleDateFormat
@@ -10,14 +10,13 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
-import com.mfatihk.countdown.R
-import com.mfatihk.countdown.databinding.ViewCountdownTimerBinding
-import com.mfatihk.countdown.helper.DateTimeAdapter
+import com.mfatihk.finalcountdown.databinding.ViewCountdownTimerBinding
+import com.mfatihk.finalcountdown.helper.DateTimeAdapter
 import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
 
-class Timer(context: Context, attrs: AttributeSet? = null): ConstraintLayout(context, attrs) {
+class CircularTimer(context: Context, attrs: AttributeSet?): ConstraintLayout(context, attrs) {
     private var binding: ViewCountdownTimerBinding =
         ViewCountdownTimerBinding.inflate(LayoutInflater.from(context), this, true)
     private lateinit var countDownTimer: CountDownTimer
