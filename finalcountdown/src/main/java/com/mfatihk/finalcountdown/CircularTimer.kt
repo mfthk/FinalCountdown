@@ -53,35 +53,6 @@ class CircularTimer(context: Context, attrs: AttributeSet?): ConstraintLayout(co
         setupAttributes(attrs)
     }
 
-    private fun setupAttributes(attrs: AttributeSet?) {
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.Timer)
-        val countdownBackgroundColor = typedArray.getColor(
-            R.styleable.Timer_countdownBackgroundColor,
-            ContextCompat.getColor(context, android.R.color.transparent)
-        )
-        val timerTextColor = typedArray.getColor(
-            R.styleable.Timer_timerTextColor,
-            ContextCompat.getColor(context, R.color.countdownInsideText)
-        )
-        val countdownTextColor = typedArray.getColor(
-            R.styleable.Timer_countdownTextColor,
-            ContextCompat.getColor(context, R.color.countdownHeaderText)
-        )
-        typedArray.recycle()
-
-        timerLayout.setBackgroundColor(countdownBackgroundColor)
-
-        tvDay.setTextColor(countdownTextColor)
-        tvHour.setTextColor(countdownTextColor)
-        tvMinute.setTextColor(countdownTextColor)
-        tvSecond.setTextColor(countdownTextColor)
-
-        tvProgressDay.setTextColor(timerTextColor)
-        tvProgressHour.setTextColor(timerTextColor)
-        tvProgressMinute.setTextColor(timerTextColor)
-        tvProgressSecond.setTextColor(timerTextColor)
-    }
-
     fun setup(endDate: Long, screenWidth: Int) {
         if(screenWidth<730){
             updateTimerSize(200)
@@ -128,6 +99,35 @@ class CircularTimer(context: Context, attrs: AttributeSet?): ConstraintLayout(co
                 tvProgressSecond.text = "0"
             }
         }.start()
+    }
+
+    private fun setupAttributes(attrs: AttributeSet?) {
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CircularTimer)
+        val countdownBackgroundColor = typedArray.getColor(
+            R.styleable.CircularTimer_countdownBackgroundColor,
+            ContextCompat.getColor(context, android.R.color.transparent)
+        )
+        val timerTextColor = typedArray.getColor(
+            R.styleable.CircularTimer_timerTextColor,
+            ContextCompat.getColor(context, R.color.countdown_inside_text)
+        )
+        val countdownTextColor = typedArray.getColor(
+            R.styleable.CircularTimer_countdownTextColor,
+            ContextCompat.getColor(context, R.color.countdown_header_text)
+        )
+        typedArray.recycle()
+
+        timerLayout.setBackgroundColor(countdownBackgroundColor)
+
+        tvDay.setTextColor(countdownTextColor)
+        tvHour.setTextColor(countdownTextColor)
+        tvMinute.setTextColor(countdownTextColor)
+        tvSecond.setTextColor(countdownTextColor)
+
+        tvProgressDay.setTextColor(timerTextColor)
+        tvProgressHour.setTextColor(timerTextColor)
+        tvProgressMinute.setTextColor(timerTextColor)
+        tvProgressSecond.setTextColor(timerTextColor)
     }
 
     private fun updateTimerSize(size: Int) {

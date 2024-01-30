@@ -8,10 +8,4 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00000000</color>
-    <color name="preSaleDetailProgressBg">#D7D7D7</color>
-    <color name="purpleGreenText">#6639E4</color>
-    <color name="countdownInsideText">#F8F8F8</color>
-    <color name="countdownHeaderText">#C6C6C6</color>
-    <color name="countdownFlatBg">#070F1A</color>
-    <color name="countdownFlatStroke">#602677</color>
 </resources>

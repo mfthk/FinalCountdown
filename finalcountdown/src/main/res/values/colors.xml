@@ -8,10 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00000000</color>
-    <color name="preSaleDetailProgressBg">#D7D7D7</color>
-    <color name="purpleGreenText">#6639E4</color>
-    <color name="countdownInsideText">#F8F8F8</color>
-    <color name="countdownHeaderText">#C6C6C6</color>
-    <color name="countdownFlatBg">#070F1A</color>
-    <color name="countdownFlatStroke">#602677</color>
+    <color name="purple_green_progress">#D7D7D7</color>
+    <color name="purple_green_text">#6639E4</color>
+    <color name="countdown_inside_text">#F8F8F8</color>
+    <color name="countdown_header_text">#C6C6C6</color>
+    <color name="countdown_flat_bg">#070F1A</color>
+    <color name="countdown_flat_stroke">#602677</color>
 </resources>

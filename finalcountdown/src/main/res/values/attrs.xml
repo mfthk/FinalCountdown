@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="Timer">
+    <declare-styleable name="CircularTimer">
         <attr name="countdownBackgroundColor" format="color" />
         <attr name="timerTextColor" format="color" />
         <attr name="countdownTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="FlatTimer">
+        <attr name="timerTextColor" format="color" />
+        <attr name="countdownTextColor" format="color" />
+        <attr name="countdownFieldBgColor" format="color" />
+        <attr name="countdownFieldStrokeColor" format="color" />
     </declare-styleable>
 </resources>
