@@ -94,11 +94,11 @@ class FlatTimer(context: Context, attrs: AttributeSet? = null): ConstraintLayout
     private fun setupAttributes(attrs: AttributeSet?) {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.FlatTimer)
         val timerTextColor = typedArray.getColor(
-            R.styleable.Timer_timerTextColor,
+            R.styleable.FlatTimer_flatTimerTextColor,
             ContextCompat.getColor(context, R.color.countdown_inside_text)
         )
         val countdownTextColor = typedArray.getColor(
-            R.styleable.Timer_countdownTextColor,
+            R.styleable.FlatTimer_flatCountdownTextColor,
             ContextCompat.getColor(context, R.color.countdown_header_text)
         )
         val fieldBackgroundColor = typedArray.getColor(

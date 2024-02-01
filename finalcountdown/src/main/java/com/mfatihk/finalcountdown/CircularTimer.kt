@@ -108,11 +108,11 @@ class CircularTimer(context: Context, attrs: AttributeSet?): ConstraintLayout(co
             ContextCompat.getColor(context, android.R.color.transparent)
         )
         val timerTextColor = typedArray.getColor(
-            R.styleable.Timer_countdownTextColor,
+            R.styleable.CircularTimer_circularTimerTextColor,
             ContextCompat.getColor(context, R.color.countdown_inside_text)
         )
         val countdownTextColor = typedArray.getColor(
-            R.styleable.Timer_countdownTextColor,
+            R.styleable.CircularTimer_circularCountdownTextColor,
             ContextCompat.getColor(context, R.color.countdown_header_text)
         )
         typedArray.recycle()
