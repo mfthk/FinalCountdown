@@ -65,6 +65,7 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.8.2")
     implementation("com.squareup.moshi:moshi-kotlin:1.15.0")
     implementation("com.squareup.moshi:moshi-adapters:1.15.0")
+    implementation("androidx.test.ext:junit-ktx:1.1.5")
     testImplementation("junit:junit:4.13.2")
 
     val retrofitVersion = "2.9.0"
